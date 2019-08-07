@@ -1,0 +1,36 @@
+html,body {
+  margin: 30px;
+}
+
+.header {
+  text-align: center;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.form-group {
+  animation: fadein 1s;
+  display: inline-block;
+}
+
+.questions {
+  font-size: 25px;
+  display: block;
+}
+
+.subtext {
+  font-size: 15px;
+  display: block;
+}
+
+.custom-checkbox {
+  display: inline-block;
+}
+
+#그외 {
+  display: inline;
+}
