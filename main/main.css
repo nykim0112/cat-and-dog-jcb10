@@ -1,0 +1,13 @@
+html {
+  height: 100%;
+  background: url("krista-mangulsone-9gz3wfHr65U-unsplash.jpg");
+  background-size: cover;
+}
+
+
+.top-content > h1 {
+  color: white;
+  margin: 40px 50px;
+  text-align: left;
+  text-shadow: 1px 1px 2px #000000;
+}
