@@ -6,6 +6,8 @@ html {
 
 
 .top-content > h1 {
+  font-family: 'Lacquer', sans-serif;
+  font-size: 60px;
   color: white;
   margin: 40px 50px;
   text-align: left;
