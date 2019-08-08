@@ -1,4 +1,7 @@
 /* 여기부터 */
+.col-12-medium h3{
+	color: white;
+}
 #wrapper{
 width:600px;
 margin:50px auto;
@@ -1837,7 +1840,7 @@ input, select, textarea {
 		.button.alt {
 			background: #f1f1f1;
 			background: rgba(0, 0, 0, 0.05);
-			color: #444;
+			color: white;
 		}
 
 			input[type="button"].alt:hover,
