@@ -10,6 +10,63 @@ body {
   color: #696969;
 }
 
+.col-dates input{
+  width: 100px;
+  align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.col-dates h4{
+  font-size: 13px;
+}
+div.wrap > div{
+  font-size: 12px;
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  input{
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100px;
+  }
+}
+.col-dates button{
+  clear: both;
+  display: block;
+  line-height: 40px;
+  margin-top: 80px;
+  background-color: #eee;
+  color: #333;
+  border: 1px solid #666;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
+}
+#ui-datepicker-div{
+ top:-999px;
+ border: 0;
+ font-size: 14px;
+}
+.ui-datepicker-header{
+  font-size: 13px;
+}
+.ui-datepicker-calendar{
+  background-color: #fff;
+  border: 1px solid #ddd;
+
+  tr{
+    font-size: 11px;
+  }
+}
+
+
 html,body {
   margin: 30px;
 }

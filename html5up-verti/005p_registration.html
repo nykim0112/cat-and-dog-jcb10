@@ -12,6 +12,55 @@
           </script>
 
          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- 추가 -->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+            $.datepicker.setDefaults($.datepicker.regional['ko']);
+            $( "#startDate" ).datepicker({
+                 changeMonth: true,
+                 changeYear: true,
+                 nextText: '다음 달',
+                 prevText: '이전 달',
+                 dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+                 dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                 monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                 monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                 dateFormat: "yymmdd",
+                 maxDate: 0,                       // 선택할수있는 최소날짜, ( 0 : 오늘 이후 날짜 선택 불가)
+                 onClose: function( selectedDate ) {
+                      //시작일(startDate) datepicker가 닫힐때
+                      //종료일(endDate)의 선택할수있는 최소 날짜(minDate)를 선택한 시작일로 지정
+                     $("#endDate").datepicker( "option", "minDate", selectedDate );
+                 }
+
+            });
+            $( "#endDate" ).datepicker({
+                 changeMonth: true,
+                 changeYear: true,
+                 nextText: '다음 달',
+                 prevText: '이전 달',
+                 dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+                 dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                 monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                 monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                 dateFormat: "yymmdd",
+                 maxDate: 0,                       // 선택할수있는 최대날짜, ( 0 : 오늘 이후 날짜 선택 불가)
+                 onClose: function( selectedDate ) {
+                     // 종료일(endDate) datepicker가 닫힐때
+                     // 시작일(startDate)의 선택할수있는 최대 날짜(maxDate)를 선택한 시작일로 지정
+                     $("#startDate").datepicker( "option", "maxDate", selectedDate );
+                 }
+
+            });
+    });
+</script>
+
+
+<!-- 추가 -->
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" href="003registration.css">
@@ -26,9 +75,9 @@
         <form class="filters inner">
 			<div class="visible-xs-block text-center">
 				<h3>검색 필터 설정하기</h3>
-				<button type="button" aria-label="Close" class="close">
+				<!-- <button type="button" aria-label="Close" class="close">
 					<span aria-hidden="true">&times;</span>
-				</button>
+				</button> -->
 			</div>
 			<ul class="clearfix">
 				<li class="col-type">
@@ -47,28 +96,31 @@
 					</dl>
 				</li>
 				<li class="col-dates">
-					<dl>
+					<!-- <dl>
 						<dt>예약일을 알려주세요!</dt>
 						<dd class="clearfix text-center">
 							<input type="text" class="pull-left" placeholder="시작 날짜" readonly="readonly" value=""/>
 							<span>&gt;</span>
 							<input type="text" class="pull-right" placeholder="마침 날짜" readonly="readonly" value=""/>
 						</dd>
-					</dl>
+					</dl> -->
+          시작일  <input type="text" id="startDate">  ~
+종료일  <input type="text" id="endDate">
+
 				</li>
 				<li class="col-age">
 					<dl>
-						<dt>반려견 나이</dt>
+						<dt>반려동물 나이</dt>
 						<dd>
                 <select id="time" class="selectpick hidden-xs" name="service_type" data-width="120px">
   								<option title="강아지" value="1"
-  									 selected="selected">강아지 (1살 이하)
+  									 selected="selected">1살 이하
   								</option>
   								<option title="성견" value="2"
-  									>성견 (2~6살)
+  									>2~6살
   								</option>
                   <option title="노령견" value="3"
-  									>노령견 (7살 이상)
+  									>7살 이상
   								</option>
   							</select>
 						</dd>
@@ -76,17 +128,17 @@
 				</li>
 				<li class="col-size">
 					<dl>
-						<dt>반려견 크기</dt>
+						<dt>반려동물 크기</dt>
 						<dd>
               <select id="time" class="selectpick hidden-xs" name="service_type" data-width="120px">
                 <option title="소형견" value="1"
-                   selected="selected">소형견 (0~4.9kg)
+                   selected="selected">0~4.9kg
                 </option>
                 <option title="중형견" value="2"
-                  >중형견 (5~14.9kg)
+                  >5~14.9kg
                 </option>
                 <option title="대형견" value="3"
-                  >대형견 (15kg 이상)
+                  >15kg 이상
                 </option>
               </select>
 						</dd>
@@ -128,17 +180,17 @@
 
   <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="check3">
-  <label class="custom-control-label" for="check3">노령견케어</label>
+  <label class="custom-control-label" for="check3">노령동물케어</label>
   </div>
 
   <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="check4">
-  <label class="custom-control-label" for="check4">환자견케어</label>
+  <label class="custom-control-label" for="check4">환자동물케어</label>
   </div>
   <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="check5">
   <label class="custom-control-label" for="check5">자격증보유</label>
-  </div>
+  </div><br>
   <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="check6">
   <label class="custom-control-label" for="check6">실외배변</label>
@@ -153,7 +205,7 @@
   </div>
   <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="check9">
-  <label class="custom-control-label" for="check9">반려견 없는 곳</label>
+  <label class="custom-control-label" for="check9">반려동물 없는 곳</label>
   </div>
 
 						</dd>
