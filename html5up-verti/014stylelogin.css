@@ -5,12 +5,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-body {
-  font-family: 'Lato', sans-serif;
-  background-color: #f8f8f;
-}
-
 body {
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
@@ -22,7 +16,10 @@ body {
   background-size: 100% 30em, auto;
   color: #696969;
 }
-
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f8f8;
+}
 body .container {
   position: relative;
   overflow: hidden;
