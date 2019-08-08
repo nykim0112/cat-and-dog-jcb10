@@ -2,6 +2,10 @@
 .col-12-medium h3{
 	color: white;
 }
+#main-wrapper h3{
+	text-align: center;
+	margin-block-end: 0px;
+}
 #wrapper{
 width:600px;
 margin:50px auto;
