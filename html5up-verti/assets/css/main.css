@@ -1,4 +1,11 @@
 /* 여기부터 */
+.col-12-medium h3{
+	color: white;
+}
+#main-wrapper h3{
+	text-align: center;
+	margin-block-end: 0px;
+}
 #wrapper{
 width:600px;
 margin:50px auto;
@@ -91,6 +98,7 @@ top: 30px;
 right:35px;
 width:auto;
 position:absolute;
+color: gray;
 }
 
 #slider-wrap.active #next{right:0px;}
@@ -1837,7 +1845,7 @@ input, select, textarea {
 		.button.alt {
 			background: #f1f1f1;
 			background: rgba(0, 0, 0, 0.05);
-			color: #444;
+			color: white;
 		}
 
 			input[type="button"].alt:hover,
@@ -1974,10 +1982,10 @@ input, select, textarea {
 				margin: 0;
 			}
 
-				.box.feature .image img {
+				/* .box.feature .image img {
 					border-bottom-left-radius: 0;
 					border-bottom-right-radius: 0;
-				}
+				} */
 
 /* Icons */
 
@@ -2081,6 +2089,8 @@ input, select, textarea {
 
 	#features-wrapper {
 		padding: 3em 0 3em 0;
+		/* margin-left: 63.925px;
+		margin-right: 63.925px; */
 	}
 
 	#main-wrapper {
@@ -2109,7 +2119,7 @@ input, select, textarea {
 			background: #ff4486;
 			color: #fff;
 			border-radius: 6px;
-			font-family: 'Oleo Script', serif;
+			font-family: 'Russo One', sans-serif;
 			font-weight: 400;
 			padding: 0.25em 0.2em 0.25em 0.2em;
 			font-size: 3.25em;

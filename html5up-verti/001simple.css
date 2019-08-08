@@ -1,0 +1,84 @@
+  #contain{
+    margin: 10px auto;
+    margin-top: 150px;
+    width: auto;
+    padding: 20px;
+  }
+  #title{
+    padding: 20px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  #text{
+    padding: 10px;
+    margin-top: 3%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  #footer{
+    clear: both;
+    padding: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+
+  }
+    @media (max-width:380px) {
+      #contain{
+        width: auto;
+      }
+    }
+    /* BUTTON */
+
+  button,
+  button::after{
+    transition: all 0.5s;
+  }
+  button{
+    background: none;
+    border: 2px solid #000;
+    border-radius: 50px;
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1em auto;
+    padding: 13px 70px;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  button:hover{
+    color: #BDBDBD;
+    border: 2px solid #BDBDBD;
+  }
+  #title{
+    animation-duration: 5s; animation-name: fadein;
+  }
+
+  /* @keyframes slideshow {
+    from{
+      margin-left: 100%; width: 300%;
+    }
+    to{
+      margin-left: 0%; width: 100%;
+    }
+  } */
+  @keyframes fadein {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+
+  @font-face {
+    font-family: 'Verdana';
+    font-weight: 500;
+    src:url('fonts/Verdana.woff')format('woff');
+  }
+  @font-face {
+    font-family: 'Verdana';
+    font-weight: 700;
+    src: url('fonts/Verdana.woff') format('woff');
+  }

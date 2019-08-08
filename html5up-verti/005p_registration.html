@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+          </script>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+          </script>
+
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="003registration.css">
+  		<link rel="stylesheet" href="assets/css/main.css" />
+          <title>Pet_Registration</title>
+    </head>
+      <body>
+        <header>
+          <h1>돌봄 신청</h1>
+        </header>
+      <article class="form">
+        <form class="filters inner">
+			<div class="visible-xs-block text-center">
+				<h3>검색 필터 설정하기</h3>
+				<button type="button" aria-label="Close" class="close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<ul class="clearfix">
+				<li class="col-type">
+					<dl>
+						<dt>서비스</dt>
+						<dd>
+							<select id="time" class="selectpick hidden-xs" name="service_type" data-width="120px">
+								<option title="24시간 돌봄" value="1"
+									 selected="selected">24시간 돌봄
+								</option>
+								<option title="데이케어" value="2"
+									>데이케어
+								</option>
+							</select>
+						</dd>
+					</dl>
+				</li>
+				<li class="col-dates">
+					<dl>
+						<dt>예약일을 알려주세요!</dt>
+						<dd class="clearfix text-center">
+							<input type="text" class="pull-left" placeholder="시작 날짜" readonly="readonly" value=""/>
+							<span>&gt;</span>
+							<input type="text" class="pull-right" placeholder="마침 날짜" readonly="readonly" value=""/>
+						</dd>
+					</dl>
+				</li>
+				<li class="col-age">
+					<dl>
+						<dt>반려견 나이</dt>
+						<dd>
+                <select id="time" class="selectpick hidden-xs" name="service_type" data-width="120px">
+  								<option title="강아지" value="1"
+  									 selected="selected">강아지 (1살 이하)
+  								</option>
+  								<option title="성견" value="2"
+  									>성견 (2~6살)
+  								</option>
+                  <option title="노령견" value="3"
+  									>노령견 (7살 이상)
+  								</option>
+  							</select>
+						</dd>
+					</dl>
+				</li>
+				<li class="col-size">
+					<dl>
+						<dt>반려견 크기</dt>
+						<dd>
+              <select id="time" class="selectpick hidden-xs" name="service_type" data-width="120px">
+                <option title="소형견" value="1"
+                   selected="selected">소형견 (0~4.9kg)
+                </option>
+                <option title="중형견" value="2"
+                  >중형견 (5~14.9kg)
+                </option>
+                <option title="대형견" value="3"
+                  >대형견 (15kg 이상)
+                </option>
+              </select>
+						</dd>
+					</dl>
+				</li>
+				<li class="col-level pull-left" >
+					<dl>
+						<dt>펫시터 등급</dt>
+						<dd>
+              <select id="time" class="selectpick hidden-xs" name="service_type" data-width="120px">
+                <option title="우수" value="1"
+                    selected="selected">우수 펫시터
+                </option>
+                <option title="일반" value="2"
+                      >일반 펫시터
+                </option>
+                <option title="신규" value="3"
+                      >신규 펫시터
+                </option>
+              </select>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="col-tags">
+					<dl>
+						<dt>원하는 태그를 모두 선택해주세요!</dt>
+						<dd>
+
+              <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="check1">
+          <label class="custom-control-label" for="check1">아파트</label>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="check2">
+    <label class="custom-control-label" for="check2">마당</label>
+  </div>
+
+  <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="check3">
+  <label class="custom-control-label" for="check3">노령견케어</label>
+  </div>
+
+  <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="check4">
+  <label class="custom-control-label" for="check4">환자견케어</label>
+  </div>
+  <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="check5">
+  <label class="custom-control-label" for="check5">자격증보유</label>
+  </div>
+  <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="check6">
+  <label class="custom-control-label" for="check6">실외배변</label>
+  </div>
+  <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="check7">
+  <label class="custom-control-label" for="check7">픽업가능</label>
+  </div>
+  <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="check8">
+  <label class="custom-control-label" for="check8">수제간식</label>
+  </div>
+  <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="check9">
+  <label class="custom-control-label" for="check9">반려견 없는 곳</label>
+  </div>
+
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</form>
+
+
+  </article>
+
+</body>
+</html>
