@@ -5,17 +5,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-body {
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-  background-color: #f7f7f7;
-  background-position: top left, top left;
-  background-repeat: repeat-x, repeat;
-  background-size: 100% 30em, auto;
-  color: #696969;
-}
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #f8f8f8;

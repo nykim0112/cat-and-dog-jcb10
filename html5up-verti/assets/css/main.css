@@ -1666,8 +1666,9 @@ input, select, textarea {
 	form select,
 	form textarea {
 		-webkit-appearance: none;
-		display: block;
-		width: 100%;
+		/* display: block; */
+		/* 수정 */
+		/* width: 100%; */
 		border-radius: 8px;
 		border: solid 1px #eee;
 	}
@@ -1878,7 +1879,7 @@ input, select, textarea {
 /* List */
 
 	ul {
-		list-style: disc;
+		list-style: none;
 		padding-left: 1em;
 	}
 
