@@ -1,46 +1,25 @@
-.darkness {
-  position:absolute;
-  top:0;
-  left:0;
-  width:inherit;
-  height:inherit;
-  background:#000000;
-  /* 추가된 부분 */
-  opacity:0;
-  transition:all .6s linear;
-}
-
-.btn-plus {
-  position:absolute;
+.image h5{
+	position:absolute;
   top:70px;
   left:70px;
-  background:red;
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  text-align:center;
+	text-align:center;
   /* 추가된 부분 */
   opacity:0;
   transform:scale(2);
   transition:all .3s linear;
 }
-
-.btn-plus span {
-  font-size:2.3em;
-  color:#ffffff;
-  user-select:none;
-}
-
-/* 추가된 부분 */
-.img-wrapper:hover .darkness{
-  opacity:0.4;
-}
-
-/* 추가된 부분 */
-.img-wrapper:hover .btn-plus {
+.image:hover h5{
+	text-align:center;
+	color: black;
   opacity:1;
-  transform:scale(1);
+  /* transform:scale(1); */
 }
+/* 추가된 부분 */
+.col-12-medium:hover img{
+  opacity:0.4;
+	transition:all .6s linear;
+}
+
 /* 여기부터 */
 .col-12-medium img{
 	width: 454.98px;
