@@ -12,6 +12,53 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+/* Logo */
+
+	#logo {
+    left: 50px;
+    top: 30px;
+		display: inline-block;
+    margin: 5%;
+	}
+
+		#logo h2 {
+			background: #ff4486;
+			color: #fff;
+			border-radius: 6px;
+			font-family: 'Russo One', sans-serif;
+			font-weight: 400;
+			padding: 0.25em 0.2em 0.25em 0.2em;
+			font-size: 3.25em;
+			letter-spacing: 0.05em;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		#logo span {
+			font-weight: 800;
+			line-height: 4.5em;
+			letter-spacing: 0.025em;
+			font-size: 0.9em;
+			vertical-align: middle;
+			margin: 0 0 0 1.25em;
+		}
+    #logo h2 {
+      font-size: 2.75em;
+      padding: 0.2em 0.275em;
+    }
+    #logo h2 {
+      background: #ff4486;
+      color: #fff;
+      border-radius: 6px;
+      font-family: 'Russo One', sans-serif;
+      font-weight: 400;
+      padding: 0.25em 0.2em 0.25em 0.2em;
+      font-size: 2em;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
 html,body {
   text-shadow: 1px 1px 1px #CDCDCD;
   background-image: url("assets/css/images/krista-mangulsone-9gz3wfHr65U-unsplash.jpg");
