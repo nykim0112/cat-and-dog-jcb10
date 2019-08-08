@@ -22,102 +22,211 @@
 
         <link rel="stylesheet" href="003registration.css">
   		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
         <title>Registration</title>
 
     </head>
 
     <body>
 
-      <header>
-        <h1>돌보미 신청</h1>
-      </header>
-
     <article class="form">
 
+    <header>
+      <h1>돌보미 등록 신청</h1>
+    </header>
+
     <div class = "q-block">
-        <form accept-charset="UTF-8" action="" method="POST">
-          <div class="form-group">
-            <label for="자기소개" class="questions">
-              안녕하세요? 처음 뵙겠습니다.</label>
-            <label for="자기소개" class="subtext">
+      <form accept-charset="UTF-8" action="" method="POST">
+        <div class="form-group">
+
+          <label for="자기소개" class="questions">
+            안녕하세요? 처음 뵙겠습니다.
+            <p class="subtext">
               주인님들께 돌보미님을 소개해주세요! 반려견과 돌보미님의 사이에선 믿음이 가장 중요하답니다.
-            </label>
-            <textarea maxlength="50" class="form-control" id="자기소개" rows="3">
-            </textarea>
-            <h6 class="pull-right" id="count_message"></h6>
-          </div>
+            </p>
+          </label>
+
+          <textarea maxlength="50" class="form-control" id="자기소개" rows="3">
+          </textarea>
+          <h6 class="pull-right" id="count_message"></h6>
+
+        </div>
     </div>
 
     <div class="q-block">
+
       <div class="questions">
-        이 친구들과 함께할 수 있어요!
+        돌보미님은 어떤 친구들과 함께 하실 수 있나요?
+        <p class="subtext">
+          꼭 책임과 사랑으로 보살펴줄 수 있는 친구들만 선택해주세요.
+        </p>
       </div>
+
       <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="check1">
-  <label class="custom-control-label" for="check1">강아지🐕</label>
-</div>
+        <input type="checkbox" class="custom-control-input" id="check1">
+        <label class="custom-control-label" for="check1">강아지 🐕</label>
+      </div>
+
       <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="check2">
-  <label class="custom-control-label" for="check2">고양이🐈</label>
-</div>
+        <input type="checkbox" class="custom-control-input" id="check2">
+          <label class="custom-control-label" for="check2">고양이 🐈</label>
+      </div>
+
       <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="check3">
-  <label class="custom-control-label" for="check3">그 외🤗</label>
-</div>
+        <input type="checkbox" class="custom-control-input" id="check3">
+        <label class="custom-control-label" for="check3">그 외 🤗</label>
+      </div>
       <div class="form-group">
-        <!-- <label for="그외"></label> -->
-        <input type="text" class="form-control" id="그외" placeholder="그 외">
+        <input type="text" class="form-control" id="그외" placeholder="동물을 입력해주세요.">
+      </div>
+
+    </div>
+
+    <div class="q-block">
+
+      <div class="questions">
+        하루에 얼마나 오래 우리 친구들 곁에 있어줄 수 있나요?
+        <p class="subtext">
+          반려동물들은 보살핌과 관심이 많이 필요한 친구들이에요. <br>시간이 낮아질 수록 주인님과 매칭될 확률이 적어진다는 점 유의해주세요.
+        </p>
+      </div>
+      <select id="time" name="time">
+        <option value="1시간 미만">1시간 미만</option>
+        <option value="1~3시간">1~3시간</option>
+        <option value="4~6시간">4~6시간</option>
+        <option value="7~9시간">7~9시간</option>
+        <option value="10~12시간">10~12시간</option>
+        <option value="13~15시간">13~15시간</option>
+        <option value="16~18시간">16~18시간</option>
+        <option value="19~21시간">19~21시간</option>
+        <option value="22~24시간">22~24시간</option>
+      </select>
+      <!-- dropdownlist도 해보았어요 ㅋㅋ -->
+    </div>
+
+    <div class="q-block">
+
+      <div class="questions">
+        사는 곳은 어디이신가요?
+      </div>
+
+      <select id="location" name="location">
+        <option value="서울">서울</option>
+        <option value="인천">인천</option>
+        <option value="대구">대구</option>
+        <option value="부산">부산</option>
+        <option value="광주">광주</option>
+        <option value="부산">부산</option>
+      </select>
+
+    </div>
+
+    <div class="q-block">
+
+      <div class="questions">
+        한 지붕 아래 같이 사는 사람들을 소개해주세요!
+        <p class="subtext">
+          간혹 낯을 가리는 친구들이 있어 주인님들이 참고하시기 위해 수집하는 정보입니다.
+        </p>
+      </div>
+
+      <div class="family">
+        <input class="custom-control family" type="text" placeholder="가족 구성원">
+        <select class="custom-control family">
+          <option value="1">1명</option>
+          <option value="2">2명</option>
+          <option value="3">3명</option>
+          <option value="4">4명</option>
+        </select>
+      </div>
+
+      <div class="family">
+        <input class="custom-control family" type="text" placeholder="가족 구성원">
+        <select class="custom-control family">
+          <option value="1">1명</option>
+          <option value="2">2명</option>
+          <option value="3">3명</option>
+          <option value="4">4명</option>
+        </select>
+      </div>
+
+      <div class="family">
+        <input class="custom-control family" type="text" placeholder="가족 구성원">
+        <select class="custom-control family">
+          <option value="1">1명</option>
+          <option value="2">2명</option>
+          <option value="3">3명</option>
+          <option value="4">4명</option>
+        </select>
+      </div>
+
+      <div class="family">
+        <input class="custom-control family" type="text" placeholder="가족 구성원">
+        <select class="custom-control family">
+          <option value="1">1명</option>
+          <option value="2">2명</option>
+          <option value="3">3명</option>
+          <option value="4">4명</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="q-block">
+
+      <div class="questions">
+        집에 머물 친구들이 편하게 지냈으면 좋겠어요!
+      </div>
+      <!-- checkbox로 제공가능 서비스  -->
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <input type="checkbox" name="chk1" value="service1">
+              마당이 있답니다~
+            </li>
+            <li>
+              <input type="checkbox" name="chk1" value="service1">
+              마당이 있답니다~
+            </li>
+            <li>
+              <input type="checkbox" name="chk1" value="service1">
+              마당이 있답니다~
+            </li>
+            <li>
+              <input type="checkbox" name="chk1" value="service1">
+              마당이 있답니다~
+            </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul>
+            <li>
+              <input type="checkbox" name="chk1" value="service1">
+              마당이 있답니다~
+            </li>
+            <li>
+              <input type="checkbox" name="chk1" value="service1">
+              마당이 있답니다~
+            </li>
+            <li>
+              <input type="checkbox" name="chk1" value="service1">
+              마당이 있답니다~
+            </li>
+            <li>
+              <input type="checkbox" name="chk1" value="service1">
+              마당이 있답니다~
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
-            <div class="questions">
-              친구들과 이 만큼의 시간을 보낼 수 있어요!
-      <!-- 응답 방법 어케 하죵? -->
-            </div>
-            <select id="time" name="time">
-              <option value="1시간 미만">1시간 미만</option>
-              <option value="1~3시간">1~3시간</option>
-              <option value="4~6시간">4~6시간</option>
-              <option value="7~9시간">7~9시간</option>
-              <option value="10~12시간">10~12시간</option>
-              <option value="13~15시간">13~15시간</option>
-              <option value="16~18시간">16~18시간</option>
-              <option value="19~21시간">19~21시간</option>
-              <option value="22~24시간">22~24시간</option>
-              <option value="24시간 초과">24시간 초과</option>
-            </select>
-            <!-- dropdownlist도 해보았어요 ㅋㅋ -->
-          <div class="questions">
-            저는 이 곳에 살고 있어요!
-          </div>
-        <select id="location" name="location">
-          <option value="서울">서울</option>
-          <option value="인천">인천</option>
-          <option value="대구">대구</option>
-          <option value="부산">부산</option>
-          <option value="광주">광주</option>
-          <option value="부산">부산</option>
-        </select>
-    <!-- 여기 촤르륵(==dropdownlist)ㅋㅋ 만들어야해요 -->
-      <div class="questions">
-        저희 집에는요~
-      </div>
-      <textarea name="blabla" rows="5" cols="60" maxlength="100"></textarea>
-      <!-- 응답 방식 정해야 해요 -->
-      <!-- 일단 textarea로 적었어요 -->
-        <div class="questions">
-          저희 집에 놀러오는 친구들은요~
-        </div>
-        <!-- checkbox로 제공가능 서비스  -->
-  <ul>
-      <li>  <input type="checkbox" name="chk1" value="service1">마당이 있답니다~</li>
-      <li>  <input type="checkbox" name="chk2" value="service2">즐거운 산책시간~</li>
-      <li>  <input type="checkbox" name="chk3" value="service3">즐거운 간식시간~</li>
-      <li>  <input type="checkbox" name="chk3" value="service3"></li>
-      <li>  <input type="checkbox" name="chk3" value="service3"></li>
-      <li>  <input type="checkbox" name="chk3" value="service3"></li>
-      <li>  <input type="checkbox" name="chk3" value="service3"></li>
-      </ul>
+
           <div class="questions">
             주의 사항이 있어요~
           </div>
