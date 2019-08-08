@@ -12,19 +12,27 @@ body {
 
 html,body {
   margin: 30px;
+  text-shadow: 1px 1px 1px #CDCDCD;
 }
 
 header{
   text-align: center;
+  font-size: 10%;
   animation: fadein 2s;
 }
-ul{
+ul {
   list-style: none;
 }
 
 .form {
+  margin: 100px;
+  display: inline-block;
   text-align: center;
   animation: fadein 4s;
+}
+
+.q-block {
+  margin: 100px 0px;
 }
 
 @keyframes fadein {
