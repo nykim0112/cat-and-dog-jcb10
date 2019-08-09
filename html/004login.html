@@ -1,4 +1,6 @@
+
 <!doctype html>
+{% load staticfiles %}
 <html lang="kr">
    <head>
    <meta charset="UTF-8">
@@ -8,11 +10,12 @@
   <link rel="stylesheet" href="014stylelogin.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Nanum+Gothic&display=swap" rel="stylesheet">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	   
 </head>
 <body>
   <div id="logo">
-    <h2><a href="index.html">CatnDog</a></h2>
+    <h2><a href="{% static '001index.html'%}">CatnDog</a></h2>
   </div>
 <section class="container">
           <article class="half">
@@ -23,47 +26,182 @@
                  </div>
                  <div class="content">
                         <div class="signin-cont cont">
-                               <form action="#" method="post" enctype="multipart/form-data">
-                                      <input type="email" name="email" id="email" class="inpt" required="required" placeholder="ID">
-                                      <label for="email">ID</label>
-                                      <input type="password" name="password" id="password" class="inpt" required="required" placeholder="PW">
+                                <form action="post_result.php" method="post" enctype="multipart/form-data" class="login-form">
+                                      <input type="email" name="email" id="email" class="email-input" required="required" placeholder="ID">
+                                      <label for="email">이메일</label>
+                                      <input type="password" name="password" id="password" class="password-input" required="required" placeholder="PW">
                                       <label for="password">PW</label>
                                       <input type="checkbox" id="remember" class="checkbox" checked>
-                                      <label for="remember">아이디를 저장할까요?</label>
+                                      <label for="remember">이메일을 저장할까요?</label>
                                       <div class="submit-wrap">
                                              <input type="submit" value="로그인" class="submit">
                                              <a href="#" class="more">비밀번호를 잊어버리셨나요?</a>
                                       </div>
                                </form>
                         </div>
-                        <div class="signup-cont cont">
-                <form action="post_result.php" method="post" enctype="multipart/form-data">
-                                      <input type="name" name="name" id="name" class="inpt" required="required" placeholder="이름">
+					 
+					   <script>
+                        var emailCode= ['TomTom@jeju.camp','soohwan@hanmail.net','318thdus@naver.com']
+                        var passCode = ['1111','2222','1234'];
+                        var loginForm = document.querySelector('.login-form');
+                        var emailInput=document.querySelector('.email-input');
+                        var passwordInput = document.querySelector('.password-input');
+
+                        loginForm.addEventListener('submit', function (e) {
+                          e.preventDefault();
+                          if (emailInput.value==emailCode[0]){
+                            if(passwordInput.value == passCode[0]) {
+                                location.href = {% static '007loggedinpage.html'%};
+                              }
+                            else{
+                              alert('잘못된 패스워드');
+                            }
+                          } else if(emailInput.value==emailCode[1]){
+                            if(passwordInput.value == passCode[1]) {
+                                location.href = {% static '007loggedinpage.html'%};
+                              }
+                            else{
+                              alert('잘못된 패스워드');
+                            }
+                          }
+                          else if(emailInput.value==emailCode[2]){
+                            if(passwordInput.value == passCode[2]) {
+                                location.href = {% static '007loggedinpage.html'%};
+                              }
+                            else{
+                              alert('잘못된 패스워드');
+                            }
+                          }
+                          else if(emailInput.value==emailCode[3] && emailCode[3]!=null){
+                            if(passwordInput.value == passCode[3]) {
+                                location.href = {% static '007loggedinpage.html'%};
+                              }
+                            else{
+                              alert('잘못된 패스워드');
+                            }
+                          }
+
+                          else if(emailInput.value==emailCode[4] && emailCode[4]!=null){
+                            if(passwordInput.value == passCode[4]) {
+                                location.href = {% static '007loggedinpage.html'%};
+                              }
+                            else{
+                              alert('잘못된 패스워드');
+                            }
+                          }
+
+                          else if(emailInput.value==emailCode[5] && emailCode[5]!=null){
+                            if(passwordInput.value == passCode[5]) {
+                                location.href = {% static '007loggedinpage.html'%};
+                              }
+                            else{
+                              alert('잘못된 패스워드');
+                            }
+                          }
+
+                          else{
+                            alert('없는 이메일입니다. 회원가입을 먼저 해주세요. :)');
+                          };
+
+
+                        });
+                        </script>
+
+                        <script>
+                        $(document).ready(function(){
+                        // 저장된 쿠키값을 가져와서 ID 칸에 넣어준다. 없으면 공백으로 들어감.
+                        var userInputId = getCookie("userInputId");
+                        $("input[name='email']").val(userInputId);
+
+                        if($("input[name='email']").val() != ""){ // 그 전에 ID를 저장해서 처음 페이지 로딩 시, 입력 칸에 저장된 ID가 표시된 상태라면,
+                            $("#remember").attr("checked", true); // ID 저장하기를 체크 상태로 두기.
+                        }
+
+                        $("#remember").change(function(){ // 체크박스에 변화가 있다면,
+                            if($("#remember").is(":checked")){ // ID 저장하기 체크했을 때,
+                                var userInputId = $("input[name='email']").val();
+                                setCookie("userInputId", userInputId, 7); // 7일 동안 쿠키 보관
+                            }else{ // ID 저장하기 체크 해제 시,
+                                deleteCookie("userInputId");
+                            }
+                        });
+
+                        // ID 저장하기를 체크한 상태에서 ID를 입력하는 경우, 이럴 때도 쿠키 저장.
+                        $("input[name='email']").keyup(function(){ // ID 입력 칸에 ID를 입력할 때,
+                            if($("#remember").is(":checked")){ // ID 저장하기를 체크한 상태라면,
+                                var userInputId = $("input[name='email']").val();
+                                setCookie("userInputId", userInputId, 7); // 7일 동안 쿠키 보관
+                            }
+                        });
+                    });
+
+                    function setCookie(cookieName, value, exdays){
+                        var exdate = new Date();
+                        exdate.setDate(exdate.getDate() + exdays);
+                        var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+                        document.cookie = cookieName + "=" + cookieValue;
+                    }
+
+                    function deleteCookie(cookieName){
+                        var expireDate = new Date();
+                        expireDate.setDate(expireDate.getDate() - 1);
+                        document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
+                    }
+
+                    function getCookie(cookieName) {
+                        cookieName = cookieName + '=';
+                        var cookieData = document.cookie;
+                        var start = cookieData.indexOf(cookieName);
+                        var cookieValue = '';
+                        if(start != -1){
+                            start += cookieName.length;
+                            var end = cookieData.indexOf(';', start);
+                            if(end == -1)end = cookieData.length;
+                            cookieValue = cookieData.substring(start, end);
+                        }
+                        return unescape(cookieValue);
+                    }
+                        </script>
+					 
+                          <div class="signup-cont cont">
+
+                                      <input type="name" name="name" id="name" class="name-input" required="required" placeholder="이름">
                                       <label for="name">이름</label>
-                    <input type="email" name="email" id="email" class="inpt" required="required" placeholder="이메일">
+                    <input type="new-email" name="email" id="new-email" class="email-input" required="required" placeholder="이메일">
                                       <label for="email">이메일</label>
-                                      <input type="password" name="password" id="password" class="inpt" required="required" placeholder="비밀번호">
+                                      <input type="password" name="new-password" id="new-password" class="password-input" required="required" placeholder="비밀번호">
                                       <label for="password">비밀번호</label>
 
 
 
-                                      <div class="submit-wrap">
-                                             <input type="submit" value="회원가입" class="submit">
-                                             <a href="#" class="more">만나서 반갑습니다.</a>
-                                      </div>
-                               </form>
+
+                                             <button value="회원가입" class="submit" onclick="addInfo()">
+                                             회원가입</button>
+
+                                    <script language ="javascript">
+
+                                      function addInfo()
+                                     {
+                                      var newName=document.getElementById("new-name");
+                                      var newEmail = document.getElementById("new-email");
+                                      var newPassword = document.getElementById("new-password");
+                                      console.log(newEmail.value,newPassword.value);
+                                      emailCode.push(newEmail.value);
+                                      passCode.push(newPassword.value);
+
+                                      alert("회원가입이 완료됐습니다.");
+                                      newName.value="";
+                                      newEmail.value="";
+                                      newPassword.value="";
+                                     }
+
+                                     </script>
             </div>
                  </div>
           </article>
           <div class="half bg"></div>
    </section>
-   <script>
-     var name=$('name').val();
-     var email=document.getElementById("email");
-     var password=document.getElementById("password");
-     var psinfo=name+email+password;
-     console.log(psinfo);
-   </script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript">
 $('.tabs .tab').click(function(){

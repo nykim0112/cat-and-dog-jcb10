@@ -1,3 +1,7 @@
+{% load staticfiles %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +36,7 @@
 
     <body>
       <div id="logo">
-        <h2><a href="index.html">CatnDog</a></h2>
+        <h2><a href="{% static '/index' %}">CatnDog</a></h2>
       </div>
     <article class="form">
 
@@ -231,25 +235,26 @@
     </div>
 
           <div class="questions">
-            주의 사항이 있어요~
+            주의 사항이 있어요!
           </div>
-            <textarea name="cf" rows="5" cols="40"></textarea>
+            <div name="cf">
+              *도그메이트 전문펫시터 지원자격<br />
+              - 서울, 경기, 인천 수도권에 거주<br />
+- 강아지를 키워본 경험이 있거나 키우고 계신 분<br />
+- 25세 이상 60세 미만<br /><br />
+
+
+* 도그메이트 펫시터의 책임과 의무<br />
+- 거주환경 사진 제공<br />
+- 돌봄 전 사전만남 진행<br />
+- 하루 5번씩 사진, 영상 공유<br />
+- 하루 1번 돌봄일지 작성<br /><br /> </div>
           <ul>
               <li><label>
                 <input type="checkbox" name="agree" value="agree">동의해요
               </label></li>
               <li> <label>  <input type="checkbox" name="agree" value="agree">동의 하지않아요</label></li>
             </ul>
-            <div class="terms">
-              다음을 확인해주세요~
-            </div>
-              <textarea name="terms" rows="5" cols="40"></textarea>
-              <ul>
-                  <li><label>
-                    <input type="checkbox" name="agree" value="agree">동의해요
-                  </label></li>
-                  <li> <label>  <input type="checkbox" name="agree" value="agree">동의 하지않아요</label></li>
-                </ul>
               <!-- 이용약관요 -->
 
 
