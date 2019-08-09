@@ -63,12 +63,14 @@ body .container {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+
 }
 body .container .half {
   float: left;
   width: 50%;
   height: 100%;
-  padding: 58px 40px 0px 0px;
+  padding: 40px;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 body .container .half.bg {
   background-image: url("http://www.mendhamtownship.org/images/animal%20control/Cat-Dog.jpg");
@@ -76,13 +78,13 @@ body .container .half.bg {
   background-repeat: no-repeat;
 }
 body .container h1 {
-  font-size: 18px;
+  font-size: 2em;
   font-weight: 700;
+  font-family: 'Beth Ellen', cursive;
   margin-bottom: 23px;
   text-align: center;
   text-indent: 6px;
-  letter-spacing: 7px;
-  text-transform: uppercase;
+  letter-spacing: 3px;
   color: #263238;
 }
 body .container .tabs {
