@@ -10,7 +10,7 @@
 
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
           </script>
-
+          <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- 추가 -->
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
@@ -63,6 +63,16 @@
 function btn(){
   alert("제출했습니다.");
 };
+</script>
+
+<script>
+function check_input(){
+  var animal_type= document.getElementById("animal_type");
+  if (animal_type!=null){
+    alert("입력하신 동물은 "+ animal_type.value +"입니다.");
+  }
+};
+
 </script>
 
 <!-- 추가 -->
@@ -118,14 +128,14 @@ function btn(){
 						<dt>반려동물 나이</dt>
 						<dd>
                 <select id="time" class="selectpick hidden-xs" name="service_type" data-width="120px">
-  								<option title="새끼고양이" value="1"
-  									 selected="selected">새끼고양이(1살 이하)
+  								<option title="미성년" value="1"
+  									 selected="selected">미성년
   								</option>
-  								<option title="성묘" value="2"
-  									>성묘(2~6살)
+  								<option title="성년" value="2"
+  									>성년
   								</option>
-                  <option title="노령묘" value="3"
-  									>노령묘(7살 이상)
+                  <option title="노년" value="3"
+  									>노년
   								</option>
   							</select>
 						</dd>
@@ -135,7 +145,8 @@ function btn(){
 					<dl>
 						<dt>반려동물 종류</dt>
 						<dd>
-              <input type="text">
+              <input type="text" id="animal_type">
+              <button onclick="check_input()" id="getFromText">확인</button>
 						</dd>
 					</dl>
 				</li>
