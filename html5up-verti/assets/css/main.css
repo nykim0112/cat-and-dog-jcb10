@@ -1,15 +1,17 @@
 .image h5{
-	position:absolute;
-  top:70px;
-  left:70px;
 	text-align:center;
-  /* 추가된 부분 */
+	position: absolute;
+	top: 80%;
+	left: 20%;
   opacity:0;
   transform:scale(2);
   transition:all .3s linear;
 }
 .image:hover h5{
 	text-align:center;
+	/* position: absolute;
+	top: 70%;
+	left: 50%; */
 	color: black;
   opacity:1;
   /* transform:scale(1); */
@@ -20,15 +22,19 @@
 	transition:all .6s linear;
 }
 
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
 /* 여기부터 */
 .col-12-medium img{
-	width: 454.98px;
-	height: 600px;
+	height: 450px;
 
 }
 
 .col-12-medium h3{
-	color: white;
+	color: #4B353A;
 }
 #main-wrapper h3{
 	text-align: center;
@@ -342,8 +348,9 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1.35em;
+		font-size: 3em;
 		margin: 0 0 1em 0;
+		line-height: 1.5em;
 	}
 
 	b, strong {
@@ -1663,7 +1670,7 @@ input, select, textarea {
 	}
 
 	header {
-		margin: 0 0 2em 0;
+		/* margin: 0 0 2em 0; */
 	}
 
 		header h2, header h3 {
@@ -1786,6 +1793,7 @@ input, select, textarea {
 		.image img {
 			display: block;
 			width: 100%;
+			background-size: cover;
 			border-radius: 8px;
 		}
 
@@ -1832,7 +1840,7 @@ input, select, textarea {
 		background: #0090c5;
 		color: #fff;
 		text-decoration: none;
-		border-radius: 6px;
+		border-radius: 10px;
 		font-weight: 800;
 		outline: 0;
 		border: 0;
@@ -1856,7 +1864,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #10a0d5;
+			background: #000000;
 		}
 
 		input[type="button"]:active,
@@ -1872,8 +1880,9 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #f1f1f1;
-			background: rgba(0, 0, 0, 0.05);
+			background: #000000;
+			background-size: 10vmax;
+			background: rgba(0, 0, 0, 1);
 			color: white;
 		}
 
@@ -1883,7 +1892,7 @@ input, select, textarea {
 			button.alt:hover,
 			.button.alt:hover {
 				background: #e8e8e8;
-				background: rgba(0, 0, 0, 0.085);
+				background: rgba(0, 0, 0, 1);
 			}
 
 			input[type="button"].alt:active,
@@ -1900,8 +1909,9 @@ input, select, textarea {
 		input[type="reset"].large,
 		button.large,
 		.button.large {
-			font-size: 2.25em;
-			padding: 0.8em 0.9em;
+			font-size: 1.5em;
+			padding: 0.7em 1.5em;
+			box-shadow: 1px 1px 2px #000000;
 		}
 
 /* List */
@@ -1974,17 +1984,18 @@ input, select, textarea {
 /* Box */
 
 	.box.container {
-		width: 90%;
+		width: 100%;
 		height: 800px;
 		background-image: url("images/krista-mangulsone-9gz3wfHr65U-unsplash.jpg");
 		background-size:cover;
-		border-radius: 6px;
+		/* border-radius: 6px; */
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
-		padding: 2em;
+		/* padding: 2em; */
+		text-shadow: 2px 2px 3px #000000;
+
 	}
 	.box {
 		background: #fff;
-		border-radius: 6px;
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 		padding: 2em;
 	}
@@ -2113,7 +2124,7 @@ input, select, textarea {
 /* Wrappers */
 
 	#header-wrapper {
-		padding: 4.5em 0 3em 0;
+		padding: 5em 0 3em 0;
 	}
 
 	#features-wrapper {
@@ -2141,14 +2152,14 @@ input, select, textarea {
 /* Logo */
 
 	#logo {
+		animation: fadein 1s;
 		display: inline-block;
 	}
 
 		#logo h1 {
-			background: #ff4486;
-			color: #fff;
-			border-radius: 6px;
-			font-family: 'Russo One', sans-serif;
+			animation: fadein 1s;
+			color: #000000;
+			font-family: 'Beth Ellen', cursive;
 			font-weight: 400;
 			padding: 0.25em 0.2em 0.25em 0.2em;
 			font-size: 3.25em;
@@ -2158,6 +2169,7 @@ input, select, textarea {
 		}
 
 		#logo span {
+			animation: fadein 1s;
 			font-weight: 800;
 			line-height: 4.5em;
 			letter-spacing: 0.025em;
@@ -2176,6 +2188,7 @@ input, select, textarea {
 	}
 
 		#nav ul {
+			font-family: 'Nanum Gothic', sans-serif;
 			list-style: none;
 			padding-left: 0;
 		}
@@ -2282,6 +2295,9 @@ input, select, textarea {
 	#banner {
 		position: relative;
 		padding: 4.5em;
+		object-fit: cover;
+		vertical-align: bottom;
+
 	}
 
 		#banner h2 {
@@ -2318,6 +2334,7 @@ input, select, textarea {
 		}
 
 			#banner ul li {
+				font-family: 'Nanum Gothic', sans-serif;
 				padding-left: 0;
 			}
 
@@ -2472,6 +2489,7 @@ input, select, textarea {
 		/* Logo */
 
 			#logo span {
+				animation: fadein 1s;
 				display: block;
 				margin: 0;
 			}
@@ -2780,6 +2798,7 @@ input, select, textarea {
 				.box.feature {
 					margin: 20px 0 0 0 !important;
 					padding: 0;
+					height: 300px;
 				}
 
 					.box.feature .inner {
@@ -2839,11 +2858,13 @@ input, select, textarea {
 		/* Logo */
 
 			#logo h1 {
+				animation: fadein 1s;
 				font-size: 2.75em;
 				padding: 0.2em 0.275em;
 			}
 
 			#logo span {
+				animation: fadein 1s;
 				line-height: 3em;
 			}
 
