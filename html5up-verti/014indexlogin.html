@@ -23,19 +23,43 @@
                  </div>
                  <div class="content">
                         <div class="signin-cont cont">
-                               <form action="#" method="post" enctype="multipart/form-data">
-                                      <input type="email" name="email" id="email" class="inpt" required="required" placeholder="ID">
-                                      <label for="email">ID</label>
-                                      <input type="password" name="password" id="password" class="inpt" required="required" placeholder="PW">
+                               <form action="post_result.php" method="post" enctype="multipart/form-data" class="login-form">
+                                      <input type="email" name="email" id="email" class="email-input" required="required" placeholder="ID">
+                                      <label for="email">이메일</label>
+                                      <input type="password" name="password" id="password" class="password-input" required="required" placeholder="PW">
                                       <label for="password">PW</label>
                                       <input type="checkbox" id="remember" class="checkbox" checked>
-                                      <label for="remember">아이디를 저장할까요?</label>
+                                      <label for="remember">이메일을 저장할까요?</label>
                                       <div class="submit-wrap">
                                              <input type="submit" value="로그인" class="submit">
                                              <a href="#" class="more">비밀번호를 잊어버리셨나요?</a>
                                       </div>
                                </form>
                         </div>
+
+                        <script>
+                        var emailCode= 'TomTom@jeju.cafe'
+                        var passCode = '1111';
+                        var loginForm = document.querySelector('.login-form');
+                        var emailInput=document.querySelector('.email-input');
+                        var passwordInput = document.querySelector('.password-input');
+
+                        loginForm.addEventListener('submit', function (e) {
+                          e.preventDefault();
+                          if (emailInput.value!=emailCode){
+                            alert('없는 이메일입니다.');
+                          }
+                          else{
+                            if (passwordInput.value == passCode) {
+                                location.href = 'loggedinpage.html';
+                            }
+                            else {
+                              alert('잘못된 패스워드');
+                            }
+                          }
+                        });
+                        </script>
+
                         <div class="signup-cont cont">
                 <form action="post_result.php" method="post" enctype="multipart/form-data">
                                       <input type="name" name="name" id="name" class="inpt" required="required" placeholder="이름">
