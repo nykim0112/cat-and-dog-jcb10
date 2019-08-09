@@ -38,25 +38,42 @@
                         </div>
 
                         <script>
-                        var emailCode= 'TomTom@jeju.cafe';
-                        var passCode = '1111';
+                        var emailCode= ['TomTom@jeju.cafe','soohwan@hanmail.net','318thdus@naver.com']
+                        var passCode = ['1111','2222','1234'];
                         var loginForm = document.querySelector('.login-form');
                         var emailInput=document.querySelector('.email-input');
                         var passwordInput = document.querySelector('.password-input');
 
                         loginForm.addEventListener('submit', function (e) {
                           e.preventDefault();
-                          if (emailInput.value!=emailCode){
-                            alert('없는 이메일입니다. 회원가입을 먼저 해주세요. :)');
-                          }
-                          else{
-                            if (passwordInput.value == passCode) {
+                          if (emailInput.value==emailCode[0]){
+                            if(passwordInput.value == passCode[0]) {
                                 location.href = 'loggedinpage.html';
+                              }
+                            else{
+                              alert('잘못된 패스워드');
                             }
-                            else {
+                          } else if(emailInput.value==emailCode[1]){
+                            if(passwordInput.value == passCode[1]) {
+                                location.href = 'loggedinpage.html';
+                              }
+                            else{
                               alert('잘못된 패스워드');
                             }
                           }
+                          else if(emailInput.value==emailCode[2]){
+                            if(passwordInput.value == passCode[2]) {
+                                location.href = 'loggedinpage.html';
+                              }
+                            else{
+                              alert('잘못된 패스워드');
+                            }
+                          }
+                          else{
+                            alert('없는 이메일입니다. 회원가입을 먼저 해주세요. :)');
+                          };
+
+
                         });
                         </script>
 
