@@ -72,7 +72,7 @@ body {
       background: #ff4486;
       color: #fff;
       border-radius: 6px;
-      font-family: 'Russo One', sans-serif;
+      font-family: 'Beth Ellen', cursive;
       font-weight: 400;
       padding: 0.25em 0.2em 0.25em 0.2em;
       font-size: 2em;
@@ -82,8 +82,8 @@ body {
     } */
 
 body {
-  text-shadow: 1px 1px 1px #CDCDCD;
   background-image: url("assets/css/images/krista-mangulsone-9gz3wfHr65U-unsplash.jpg");
+  text-shadow: 1px 1px 1px #CDCDCD;
 }
 
 header{
@@ -95,8 +95,9 @@ ul {
   list-style: none;
 }
 
-ul > li {
-  margin: 10px;
+footer{
+  margin: 10%;
+  opacity: 0;
 }
 
 .form {
@@ -105,11 +106,11 @@ ul > li {
   animation: fadein 2s;
   margin: auto;
   padding: 80px 0px;
-  background-color: #f7f7f7;
+  background-color: #FFFFFF;
 }
 
 .q-block {
-  margin: 80px 0px;
+  margin: 2em 0px;
 }
 
 @keyframes fadein {
@@ -125,7 +126,7 @@ ul > li {
 .questions {
   font-size: 25px;
   display: block;
-  margin: 30px;
+  margin: 10px;
 }
 .terms{
   font-size: 25px;
@@ -142,8 +143,10 @@ ul > li {
 .custom-checkbox {
   display: inline-block;
   margin: 0px 50px;
-  transform: scale(1.3);
   align-items: center;
+}
+.row > .custom-checkbox {
+  margin: 10px 5px;
 }
 
 .family {
@@ -155,13 +158,14 @@ ul > li {
 }
 
 .row {
-  width: 70%;
+  width: 80%;
   margin: auto;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
-li > input {
-  margin: 10px;
+
+input {
+  margin: 20px;
 }
 
 #그외 {
@@ -251,9 +255,4 @@ button{
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
-}
-
-footer{
-  margin: 10%;
-  opacity: 0;
 }
